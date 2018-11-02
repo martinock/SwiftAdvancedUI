@@ -130,34 +130,34 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOn-Vd-phu">
-                                <rect key="frame" x="16" y="557" width="69" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Upvote"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bd7-up-Dp1">
-                                <rect key="frame" x="101" y="557" width="69" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Comment"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDW-7G-pQM">
-                                <rect key="frame" x="186" y="557" width="69" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Downvote"/>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="oTU-ys-rcR">
+                                <rect key="frame" x="16" y="557" width="343" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOn-Vd-phu">
+                                        <rect key="frame" x="0.0" y="0.0" width="103.5" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Upvote"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bd7-up-Dp1">
+                                        <rect key="frame" x="119.5" y="0.0" width="104" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Comment"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDW-7G-pQM">
+                                        <rect key="frame" x="239.5" y="0.0" width="103.5" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Downvote"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="RDW-7G-pQM" firstAttribute="leading" secondItem="bd7-up-Dp1" secondAttribute="trailing" constant="16" id="1Bj-fZ-VHS"/>
-                            <constraint firstItem="XOn-Vd-phu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="89a-Hr-MgI"/>
-                            <constraint firstItem="bd7-up-Dp1" firstAttribute="leading" secondItem="XOn-Vd-phu" secondAttribute="trailing" constant="16" id="94B-wc-n2i"/>
-                            <constraint firstItem="RDW-7G-pQM" firstAttribute="centerY" secondItem="bd7-up-Dp1" secondAttribute="centerY" id="Ckq-SH-Pup"/>
-                            <constraint firstItem="RDW-7G-pQM" firstAttribute="width" secondItem="bd7-up-Dp1" secondAttribute="width" id="EVB-50-H7q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oTU-ys-rcR" secondAttribute="trailing" constant="16" id="92G-KK-cDG"/>
+                            <constraint firstItem="oTU-ys-rcR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ALt-mw-zSM"/>
                             <constraint firstAttribute="trailing" secondItem="lxo-21-jVK" secondAttribute="trailing" constant="16" id="HAS-jR-c55"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XOn-Vd-phu" secondAttribute="bottom" constant="16" id="LLp-dt-pef"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oTU-ys-rcR" secondAttribute="bottom" constant="16" id="SpL-vg-TFd"/>
                             <constraint firstItem="lxo-21-jVK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="etO-YU-NNP"/>
-                            <constraint firstItem="bd7-up-Dp1" firstAttribute="width" secondItem="XOn-Vd-phu" secondAttribute="width" id="h4S-r6-R5b"/>
-                            <constraint firstItem="bd7-up-Dp1" firstAttribute="centerY" secondItem="XOn-Vd-phu" secondAttribute="centerY" id="lJw-76-PEb"/>
                             <constraint firstItem="lxo-21-jVK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="rJM-bE-Duw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -166,6 +166,7 @@
                         <outlet property="btnWhat" destination="dC7-xf-eUF" id="cJr-jy-znZ"/>
                         <outlet property="btnWhen" destination="wXh-hP-DQK" id="Teo-5C-GT2"/>
                         <outlet property="btnWhere" destination="JrU-fR-heh" id="Fk4-GD-h2b"/>
+                        <outlet property="stackView" destination="lxo-21-jVK" id="xt6-Go-c2D"/>
                         <outlet property="whatContent" destination="P2q-fo-zFJ" id="5G7-CY-egS"/>
                         <outlet property="whenContent" destination="2C3-Fv-rXS" id="jBi-E5-hiQ"/>
                         <outlet property="whereContent" destination="aMB-9B-Cvk" id="99q-G2-oTf"/>

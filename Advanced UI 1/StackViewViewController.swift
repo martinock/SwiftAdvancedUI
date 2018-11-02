@@ -15,7 +15,8 @@ class StackViewViewController: UIViewController {
     @IBOutlet weak var btnWhen: UIButton!
     @IBOutlet weak var btnWhere: UIButton!
     
-//    @IBOutlet weak var whenToWhatContent: NSLayoutConstraint!
+    @IBOutlet weak var stackView: UIStackView!
+    //    @IBOutlet weak var whenToWhatContent: NSLayoutConstraint!
 //    @IBOutlet weak var whenToWhat: NSLayoutConstraint!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,34 @@ class StackViewViewController: UIViewController {
         for subview in view.subviews {
             subview.backgroundColor = .clear
         }
+        
+        /* Add component to StackView programatically */
+        let label = UILabel()
+        label.text = "Stackview Tutorial"
+        stackView.addArrangedSubview(label)
+        
+        /* Adding view to StackView programatically */
+        /* NOTE: need to set height and width constraint */
+        /* UIView doesn't have intrinsic size, not like label. Therefore we need to set width and height first */
+        let newView = UIView(frame: CGRect(x: 0, y: 0, width: 128, height: 128))
+        newView.backgroundColor = UIColor.red
+        newView.translatesAutoresizingMaskIntoConstraints = false
+        
+        /* Adding constraint programatically */
+        /* NOTE: Once isActive is true, we can never put it back to false */
+        let heightConstraint = newView.heightAnchor.constraint(equalToConstant: 128)
+//        newView.heightAnchor.constraint(equalToConstant: 128).isActive = true
+//        newView.widthAnchor.constraint(equalToConstant: 128).isActive = true
+        
+        /* Batch constraint activation */
+        NSLayoutConstraint.activate([
+            heightConstraint,
+            newView.widthAnchor.constraint(equalToConstant: 128)
+        ])
+        stackView.addArrangedSubview(newView)
+        
+        newView.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 16).isActive = true
+        
     }
 
     @IBAction func hideWhat(_ sender: Any) {
