@@ -15,8 +15,8 @@ class StackViewViewController: UIViewController {
     @IBOutlet weak var btnWhen: UIButton!
     @IBOutlet weak var btnWhere: UIButton!
     
-    @IBOutlet weak var whenToWhatContent: NSLayoutConstraint!
-    @IBOutlet weak var whenToWhat: NSLayoutConstraint!
+//    @IBOutlet weak var whenToWhatContent: NSLayoutConstraint!
+//    @IBOutlet weak var whenToWhat: NSLayoutConstraint!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,8 +32,8 @@ class StackViewViewController: UIViewController {
         /* This constant is used to make UI responsive */
         /* The number should be between 750 - 1000, because default priority is 1000 */
         /* However this code is boilerplate in big projects. Solution: StackView */
-        whenToWhat.priority = UILayoutPriority(rawValue: whatContent.isHidden ? 950 : 900)
-        whenToWhatContent.priority = UILayoutPriority(rawValue: whatContent.isHidden ? 900 : 950)
+//        whenToWhat.priority = UILayoutPriority(rawValue: whatContent.isHidden ? 950 : 900)
+//        whenToWhatContent.priority = UILayoutPriority(rawValue: whatContent.isHidden ? 900 : 950)
     }
     
     @IBAction func hideWhen(_ sender: Any) {
