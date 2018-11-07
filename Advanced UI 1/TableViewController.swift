@@ -10,8 +10,8 @@ import UIKit
 class TableViewController: UITableViewController {
 
     //NOTE: Provide this when we want to set table cell programatically
-    let cellText = ["cell 0", "cell 1", "cell 2", "cell 3", "cell 4", "cell 5", "cell 6"]
-    let cellImage = [[#imageLiteral(resourceName: "profile_pic"), #imageLiteral(resourceName: "game_center"), #imageLiteral(resourceName: "safari"), #imageLiteral(resourceName: "photos")], [#imageLiteral(resourceName: "music"), #imageLiteral(resourceName: "app_store"), #imageLiteral(resourceName: "safari"), #imageLiteral(resourceName: "photos")], [#imageLiteral(resourceName: "icon_time_half_green"), #imageLiteral(resourceName: "camera"), #imageLiteral(resourceName: "settings"), #imageLiteral(resourceName: "photos")]]
+    let cellText = [["Sign in to your iPhone"], ["General", "Privacy"], ["Password & Accounts"], ["Maps", "Safari", "News", "iTunes", "Photos", "Game Center"], ["Developer"]]
+    let cellImage = [[#imageLiteral(resourceName: "profile_pic")], [#imageLiteral(resourceName: "settings"), #imageLiteral(resourceName: "air_asia")], [#imageLiteral(resourceName: "camera")], [#imageLiteral(resourceName: "maps"), #imageLiteral(resourceName: "safari"), #imageLiteral(resourceName: "icon_time_half_green"), #imageLiteral(resourceName: "itunes"), #imageLiteral(resourceName: "photos"), #imageLiteral(resourceName: "game_center")], [#imageLiteral(resourceName: "settings")]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,24 +55,23 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         //NOTE: This is how we configure cell with dynamic prototypes
-//        if indexPath.section == 0 {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "profile_pic_cell", for: indexPath)
-//            return cell
-//        }
-//        else if indexPath.section == 1 {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "custom", for: indexPath)
-//            return cell
-//        }
-//        else {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "basic_cell", for: indexPath)
-//            return cell
-//        }
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "profile_pic_cell", for: indexPath)
+            return cell
+        }
+        else {
+            //NOTE: A way to set label and image programatically
+            let cell = tableView.dequeueReusableCell(withIdentifier: "basic_cell", for: indexPath)
+            cell.textLabel?.text = cellText[indexPath.section % cellText.count][indexPath.row % cellText[indexPath.section % cellText.count].count]
+            cell.imageView?.image = cellImage[indexPath.section % cellImage.count][indexPath.row % cellImage[indexPath.section % cellImage.count].count]
+            return cell
+        }
         
         //NOTE: A way to set label and image programatically
-        let cell = tableView.dequeueReusableCell(withIdentifier: "basic_cell", for: indexPath)
-        cell.textLabel?.text = cellText[indexPath.row % cellText.count]
-        cell.imageView?.image = cellImage[indexPath.section % cellImage.count][indexPath.row % cellImage[indexPath.section % cellImage.count].count]
-        return cell
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "basic_cell", for: indexPath)
+//        cell.textLabel?.text = cellText[indexPath.section % cellText.count][indexPath.row % cellText[indexPath.section % cellText.count].count]
+//        cell.imageView?.image = cellImage[indexPath.section % cellImage.count][indexPath.row % cellImage[indexPath.section % cellImage.count].count]
+//        return cell
         
 //         Configure the cell...
 //        //NOTE: this is a way to access row and section programatically
