@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E5553D5B21927EDB00A1BE59 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5553D5A21927EDB00A1BE59 /* TableViewController.swift */; };
 		E560BF40218ABBA200F8C5CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E560BF3F218ABBA200F8C5CA /* AppDelegate.swift */; };
 		E560BF42218ABBA200F8C5CA /* StackViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E560BF41218ABBA200F8C5CA /* StackViewViewController.swift */; };
 		E560BF45218ABBA200F8C5CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E560BF43218ABBA200F8C5CA /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E5553D5A21927EDB00A1BE59 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		E560BF3C218ABBA200F8C5CA /* Advanced UI 1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Advanced UI 1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E560BF3F218ABBA200F8C5CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E560BF41218ABBA200F8C5CA /* StackViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				E560BF46218ABBA400F8C5CA /* Assets.xcassets */,
 				E560BF48218ABBA400F8C5CA /* LaunchScreen.storyboard */,
 				E560BF43218ABBA200F8C5CA /* Main.storyboard */,
+				E5553D5A21927EDB00A1BE59 /* TableViewController.swift */,
 			);
 			path = "Advanced UI 1";
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 				E560BF52218B0C5800F8C5CA /* ScrollViewViewController.swift in Sources */,
 				E560BF54218B52EA00F8C5CA /* LongViewViewController.swift in Sources */,
 				E560BF42218ABBA200F8C5CA /* StackViewViewController.swift in Sources */,
+				E5553D5B21927EDB00A1BE59 /* TableViewController.swift in Sources */,
 				E560BF40218ABBA200F8C5CA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
