@@ -45,6 +45,21 @@ class TableViewController: UITableViewController {
 //
 //        return label
 //    }
+    
+    //NOTE: A way to set action when table view cell selected.
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        if indexPath.section > 0 {
+//            if let cell = tableView.cellForRow(at: indexPath) {
+//                cell.accessoryType = cell.accessoryType == .none ? .checkmark : .none
+//            }
+//            //tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
+//        }
+        
+        //NOTE: Navigate to certain view controller when element clicked
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "StackViewViewController")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 
     // MARK: - Table view data source
     // NOTE: This method return 1 by default, we can omit this function when having 1 section only
