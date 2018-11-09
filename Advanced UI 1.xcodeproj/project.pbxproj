@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E52766CD21951A1F004C4871 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52766CB21951A1F004C4871 /* TableViewCell.swift */; };
+		E52766CE21951A1F004C4871 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E52766CC21951A1F004C4871 /* TableViewCell.xib */; };
 		E5553D5B21927EDB00A1BE59 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5553D5A21927EDB00A1BE59 /* TableViewController.swift */; };
 		E560BF40218ABBA200F8C5CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E560BF3F218ABBA200F8C5CA /* AppDelegate.swift */; };
 		E560BF42218ABBA200F8C5CA /* StackViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E560BF41218ABBA200F8C5CA /* StackViewViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E52766CB21951A1F004C4871 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		E52766CC21951A1F004C4871 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		E5553D5A21927EDB00A1BE59 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		E560BF3C218ABBA200F8C5CA /* Advanced UI 1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Advanced UI 1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E560BF3F218ABBA200F8C5CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 				E560BF48218ABBA400F8C5CA /* LaunchScreen.storyboard */,
 				E560BF43218ABBA200F8C5CA /* Main.storyboard */,
 				E5553D5A21927EDB00A1BE59 /* TableViewController.swift */,
+				E52766CB21951A1F004C4871 /* TableViewCell.swift */,
+				E52766CC21951A1F004C4871 /* TableViewCell.xib */,
 			);
 			path = "Advanced UI 1";
 			sourceTree = "<group>";
@@ -131,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E560BF4A218ABBA400F8C5CA /* LaunchScreen.storyboard in Resources */,
+				E52766CE21951A1F004C4871 /* TableViewCell.xib in Resources */,
 				E560BF47218ABBA400F8C5CA /* Assets.xcassets in Resources */,
 				E560BF45218ABBA200F8C5CA /* Main.storyboard in Resources */,
 			);
@@ -146,6 +153,7 @@
 				E560BF52218B0C5800F8C5CA /* ScrollViewViewController.swift in Sources */,
 				E560BF54218B52EA00F8C5CA /* LongViewViewController.swift in Sources */,
 				E560BF42218ABBA200F8C5CA /* StackViewViewController.swift in Sources */,
+				E52766CD21951A1F004C4871 /* TableViewCell.swift in Sources */,
 				E5553D5B21927EDB00A1BE59 /* TableViewController.swift in Sources */,
 				E560BF40218ABBA200F8C5CA /* AppDelegate.swift in Sources */,
 			);

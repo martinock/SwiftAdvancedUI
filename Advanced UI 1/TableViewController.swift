@@ -24,7 +24,27 @@ class TableViewController: UITableViewController {
         
         //NOTE: No need for "Dynamic Prototypes" table view
 //        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
+        tableView.register(UINib(nibName: String(describing: TableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: TableViewCell.self))
+        
+        //NOTE: best practice. Pre-requisite: set the constraint correctly.
+        tableView.rowHeight = UITableView.automaticDimension
+        //NOTE: this param is not mandatory, yet this is best practice too. Too help the system minimize the calculation process
+        tableView.estimatedRowHeight = 61;
     }
+    
+    //NOTE: A way to insert header to every section.
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "This is Header"
+    }
+    
+    //NOTE: A way to force style to table section header.
+//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let label = UILabel()
+//        label.font = UIFont.systemFont(ofSize: 16);
+//        label.text = "This is Header"
+//
+//        return label
+//    }
 
     // MARK: - Table view data source
     // NOTE: This method return 1 by default, we can omit this function when having 1 section only
@@ -53,19 +73,33 @@ class TableViewController: UITableViewController {
 
     // NOTE: By implementing this function, we omit every view we implement in storyboard
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        //NOTE: This is how we configure cell with dynamic prototypes
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "profile_pic_cell", for: indexPath)
             return cell
         }
-        else {
-            //NOTE: A way to set label and image programatically
-            let cell = tableView.dequeueReusableCell(withIdentifier: "basic_cell", for: indexPath)
-            cell.textLabel?.text = cellText[indexPath.section % cellText.count][indexPath.row % cellText[indexPath.section % cellText.count].count]
-            cell.imageView?.image = cellImage[indexPath.section % cellImage.count][indexPath.row % cellImage[indexPath.section % cellImage.count].count]
+        else if let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: TableViewCell.self), for: indexPath) as? TableViewCell {
+            cell.imgView.image = cellImage[indexPath.section % cellImage.count][indexPath.row % cellImage[indexPath.section % cellImage.count].count]
+            cell.label.text = cellText[indexPath.section % cellText.count][indexPath.row % cellText[indexPath.section % cellText.count].count]
+            cell.infoLabel.text = "2018/11/09"
+            cell.subtitle.text = "This is setting"
+            
             return cell
         }
+        
+        return UITableViewCell()
+        
+        //NOTE: This is how we configure cell with dynamic prototypes
+//        if indexPath.section == 0 {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "profile_pic_cell", for: indexPath)
+//            return cell
+//        }
+//        else {
+//            //NOTE: A way to set label and image programatically
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "basic_cell", for: indexPath)
+//            cell.textLabel?.text = cellText[indexPath.section % cellText.count][indexPath.row % cellText[indexPath.section % cellText.count].count]
+//            cell.imageView?.image = cellImage[indexPath.section % cellImage.count][indexPath.row % cellImage[indexPath.section % cellImage.count].count]
+//            return cell
+//        }
         
         //NOTE: A way to set label and image programatically
 //        let cell = tableView.dequeueReusableCell(withIdentifier: "basic_cell", for: indexPath)
